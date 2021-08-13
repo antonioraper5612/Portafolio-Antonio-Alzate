@@ -92,7 +92,66 @@ body {
 
 /*FIN NAVEGACION*/
 
-.main-portafolio {}
+
+/* INICIO MENU HAMBURGUEZA */
+
+.menu-hamburguesa {
+    position: fixed;
+    display: none;
+}
+
+.lbl-menu {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.lbl-menu #spn1,
+#spn2,
+#spn3 {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+#spn2 {
+    top: 11px;
+}
+
+#spn3 {
+    top: 22px;
+}
+
+#btn-menu {
+    display: none;
+}
+
+#btn-menu:checked~.lbl-menu #spn1 {
+    transform: rotate(140deg);
+    top: 10px;
+}
+
+#btn-menu:checked~.lbl-menu #spn2 {
+    opacity: 0;
+}
+
+#btn-menu:checked~.lbl-menu #spn3 {
+    transform: rotate(-140deg);
+    top: 10px;
+}
+
+.menu-hamburguesa ul li a img {
+    width: 40px;
+    margin: 10px 20px;
+}
+
+
+/* FIN MENU HAMBURGUEZA */
 
 .main-portafolio img {
     width: 316xp;
