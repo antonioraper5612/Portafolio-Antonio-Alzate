@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
+/*font-family: 'Ubuntu', sans-serif;*/
+
+body {
+    background-color: #111111;
+    height: 100vh;
+}
+
+
+/* INICIO MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}
+
+.menu img {
+    width: 40px;
+}
+
+.menu a span:first-child {
+    display: inline-block;
+    padding: 45px;
+    margin: 5px;
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #ffb400;
+    font-weight: 700;
+}
+
+.menu a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.menu a span {
+    transition: transform 0.2s ease-out;
+}
+
+.menu a:hover span:first-child {
+    transform: translateY(100%);
+}
+
+.menu a:hover span:last-child {
+    transform: none;
+    font-size: 1rem;
+}
+
+
+/* FIN MENU */
+
+
+/* INICIO MENU HAMBURGUEZA */
+
+.menu-hamburguesa {
+    position: fixed;
+    display: none;
+}
+
+.lbl-menu {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.lbl-menu #spn1,
+#spn2,
+#spn3 {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+#spn2 {
+    top: 11px;
+}
+
+#spn3 {
+    top: 22px;
+}
+
+#btn-menu {
+    display: none;
+}
+
+#btn-menu:checked~.lbl-menu #spn1 {
+    transform: rotate(140deg);
+    top: 10px;
+}
+
+#btn-menu:checked~.lbl-menu #spn2 {
+    opacity: 0;
+}
+
+#btn-menu:checked~.lbl-menu #spn3 {
+    transform: rotate(-140deg);
+    top: 10px;
+}
+
+.menu-hamburguesa ul li a img {
+    width: 40px;
+    margin: 10px 20px;
+}
+
+
+/* FIN MENU HAMBURGUEZA */
+
+.fondo-secundario {
+    position: fixed;
+    background-color: #ffb400;
+    height: 200%;
+    width: 100%;
+    transform: rotate(-15deg);
+    left: -83%;
+    top: -50%;
+}
+
+.container {
+    width: 90%;
+}
+
+
+/* INICIO FOTOS */
+
+.foto-mobile {
+    display: none;
+}
+
+.foto-perfil {
+    background-image: url("../img/fotoperfil.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 60%;
+    height: calc(100vh - 80px);
+    position: relative;
+    left: 40px;
+    top: 40px;
+    z-index: 111;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgb(0 0 0 / 90%);
+}
+
+.contenido a img {
+    width: 45px;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+
+
+/* FIN FOTOS */
+
+
+/* INICIO CONTENIDO */
+
+.main-contenido {
+    display: flex;
+    width: 95%;
+}
+
+.contenido {
+    margin: 100px;
+    width: 60%;
+    transition: all 1s ease;
+}
+
+.contenido h1 {
+    font-size: 2.9rem;
+    color: #ffb400;
+    margin: 18px 0 10px;
+    text-align: center;
+}
+
+.contenido h1 span {
+    color: white;
+    display: block;
+}
+
+.contenido p {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 35px;
+    margin: 15px 0 28px;
+}
+
+.contenido a {
+    color: white;
+    border: 1px solid #ffb400;
+    border-radius: 30px;
+    margin: 0 60px;
+    padding: 12px 51px 12px 12px;
+    transition: 0.3s ease-out;
+    position: relative;
+    top: 0px;
+    left: 0;
+    width: 36%;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.contenido a,
+.efecto:hover {
+    transform: translateX(10px);
+}
+
+.efecto {
+    width: 150px;
+    height: 50px;
+    background-color: #ffb400;
+    margin-top: 20px;
+    margin-left: 50px;
+    box-sizing: border-box;
+}
+
+.efecto:hover {
+    transition: all 3s ease;
+    transform: translate(0, -50px);
+    opacity: 1;
+    z-index: -1;
+}
+
+
+/* FIN  CONTENIDO */
+
+@media (max-width: 992px) {
+    .container {
+        width: 80%;
+    }
+    .menu {
+        display: none;
+    }
+    /* INICIO MENU HAMBURGUEZA */
+    .menu-hamburguesa {
+        display: block;
+        z-index: 99999;
+        position: fixed;
+        top: 10px;
+        right: 70px;
+    }
+    .menu-hamburguesa ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #252525;
+        top: 45px;
+        left: -100%;
+        transition: all 0.5s;
+    }
+    .menu-hamburguesa ul li {
+        display: block;
+    }
+    .menu-hamburguesa ul li a {
+        font-size: 10px;
+        color: white;
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    #btn-menu:checked~ul {
+        left: 0;
+    }
+    /* FIN MENU HAMBURGUEZA */
+    .fondo-secundario {
+        display: none;
+    }
+    /* INICIO FOTOS */
+    .foto-perfil {
+        display: none;
+    }
+    .foto-mobile {
+        display: flex;
+        justify-content: center;
+    }
+    .foto-mobile img {
+        border-radius: 50%;
+        border: 1px solid #111111;
+    }
+    /* FIN FOTOS */
+    /* INICIO CONTENIDO */
+    .main-contenido {
+        display: block;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 0;
+    }
+    .contenido a {
+        color: white;
+        border: 1px solid #ffb400;
+        border-radius: 30px;
+        margin: 0 60px;
+        padding: 15px 30px 15px 15px;
+        transition: 0.3s ease-out;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 30%;
+        margin-bottom: 50px;
+    }
+    /* FIN CONTENIDO */
+}
+
+@media (max-width: 576px) {
+    /* INICIO FOTOS */
+    .foto-mobile {
+        display: none;
+    }
+    /* FIN FOTOS */
+    .container {
+        width: 90%;
+    }
+    /* INICIO CONTENIDO */
+    .contenido {
+        text-align: justify;
+    }
+    .contenido h1 {
+        margin-top: 150px;
+        font-size: 25px;
+    }
+    .contenido a {
+        color: white;
+        border: 1px solid #ffb400;
+        border-radius: 30px;
+        margin: 0 60px;
+        padding: 15px 0px 15px 15px;
+        transition: 0.3s ease-out;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 62%;
+    }
+    /* FIN CONTENIDO */
+}

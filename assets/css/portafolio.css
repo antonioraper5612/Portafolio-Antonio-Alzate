@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
+/*font-family: 'Ubuntu', sans-serif;*/
+
+body {
+    background-color: #111111;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.encabezado h2 {
+    color: rgba(255, 255, 255, 0.07);
+    font-size: 6.8rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+.encabezado h1 {
+    position: absolute;
+    top: 70px;
+    color: white;
+    font-size: 3.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.encabezado h1 span {
+    color: #FFB400;
+}
+
+
+/*NAVEGACION*/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    z-index: 1;
+}
+
+.menu img {
+    width: 40px;
+}
+
+.menu a span:first-child {
+    display: inline-block;
+    padding: 45px;
+    margin: 5px;
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #FFB400;
+    font-weight: 700;
+}
+
+.menu a span:last-child {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.menu a span {
+    transition: transform 0.2s ease-out;
+}
+
+.menu a:hover span:first-child {
+    transform: translateY(100%);
+}
+
+.menu a:hover span:last-child {
+    transform: none;
+    font-size: 1rem;
+}
+
+
+/*FIN NAVEGACION*/
+
+.main-portafolio {}
+
+.main-portafolio img {
+    width: 316xp;
+    height: 195px;
+    padding: 15px;
+    border-radius: 20px;
+}

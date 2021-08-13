@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
+/*font-family: 'Ubuntu', sans-serif;*/
+
+body {
+    background-color: #111111;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    color: #fff;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.encabezado h2 {
+    color: rgba(255, 255, 255, 0.07);
+    font-size: 6.8rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+.encabezado h1 {
+    position: absolute;
+    top: 70px;
+    color: white;
+    font-size: 3.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.encabezado h1 span {
+    color: #ffb400;
+}
+
+
+/*NAVEGACION*/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+}
+
+.menu img {
+    width: 40px;
+}
+
+.menu a span:first-child {
+    display: inline-block;
+    padding: 45px;
+    margin: 5px;
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #ffb400;
+    font-weight: 700;
+}
+
+.menu a span:last-child {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.menu a span {
+    transition: transform 0.2s ease-out;
+}
+
+.menu a:hover span:first-child {
+    transform: translateY(100%);
+}
+
+.menu a:hover span:last-child {
+    transform: none;
+    font-size: 1rem;
+}
+
+
+/* FIN NAVEGACION */
+
+
+/* INICIO MENU HAMBURGUEZA */
+
+.menu-hamburguesa {
+    position: fixed;
+    display: none;
+}
+
+.lbl-menu {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.lbl-menu #spn1,
+#spn2,
+#spn3 {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+#spn2 {
+    top: 11px;
+}
+
+#spn3 {
+    top: 22px;
+}
+
+#btn-menu {
+    display: none;
+}
+
+#btn-menu:checked~.lbl-menu #spn1 {
+    transform: rotate(140deg);
+    top: 10px;
+}
+
+#btn-menu:checked~.lbl-menu #spn2 {
+    opacity: 0;
+}
+
+#btn-menu:checked~.lbl-menu #spn3 {
+    transform: rotate(-140deg);
+    top: 10px;
+}
+
+.menu-hamburguesa ul li a img {
+    width: 40px;
+    margin: 10px 20px;
+}
+
+
+/* FIN  MENU HAMBURGUEZA */
+
+
+/* INICIO PERSONAL */
+
+.main-about {
+    display: flex;
+}
+
+.main-about-foto-perfil {
+    display: none;
+}
+
+.title-main-personal {
+    margin-bottom: 25px;
+}
+
+.main-about-personal {
+    width: 24%;
+}
+
+.main-about-list li {
+    margin-bottom: 20px;
+}
+
+.download a {
+    border: 1px solid #ffb400;
+    padding: 15px 55px 15px 10px;
+    border-radius: 30px;
+    position: relative;
+    top: 30px;
+    left: 0;
+}
+
+.download a span {
+    color: #fff;
+    display: inline;
+}
+
+.download img {
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+
+/* FIN MAIN PERSONAL */
+
+
+/* INICIO CARDS */
+
+.main-cards {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.card {
+    border: 1px solid #252525;
+    padding: 20px 30px 25px 40px;
+    width: 35%;
+    border-radius: 5px;
+    margin: 10px;
+    width: 40%;
+}
+
+.card h3 {
+    font-size: 50px;
+    color: #ffb400;
+}
+
+.card h3::after {
+    content: "+";
+    font-size: 35px;
+    position: relative;
+    top: -20px;
+    left: 0;
+}
+
+.card p {
+    position: relative;
+    top: 0;
+    left: 30px;
+    font-size: 15px;
+}
+
+.card span {
+    display: block;
+}
+
+.card span::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    width: 30px;
+    height: 1px;
+    background: #777;
+}
+
+
+/* FIN MAIN CARDS */
+
+
+/* INICIO SKILL */
+
+.separador {
+    border-top: 1px solid #252525;
+    margin: 70px auto 55px;
+    max-width: 40%;
+}
+
+.main-skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-skill {
+    font-size: 30px;
+    text-align: center;
+}
+
+.main-skill-content {
+    width: 25%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-skill-content h4 {
+    font-size: 18px;
+}
+
+.main-skill-content img {
+    width: 90px;
+}
+
+
+/* FIN SKILL */
+
+
+/* INICIO FOODER */
+
+.main-fooder-content {
+    display: flex;
+}
+
+.main-fooder h3 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+.title-principal-fooder {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 2px;
+    opacity: 0.8;
+    color: #fff;
+    margin-left: 50px;
+    position: relative;
+    margin-right: 5px;
+}
+
+.sub-title-fooder::before {
+    content: "";
+    border-top: 1px solid #333;
+    color: #fff;
+    padding: 10px;
+    opacity: .8;
+    position: relative;
+    bottom: -20px;
+    margin-right: 5px;
+}
+
+.main-fooder-img {
+    position: relative;
+}
+
+.main-fooder-img img {
+    width: 40px;
+    position: absolute;
+    top: -12px;
+    z-index: 9;
+}
+
+.main-fooder-content ul li {
+    padding-bottom: 50px;
+}
+
+.main-fooder-content ul li h5 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-left: 50px;
+    padding: 10px 0;
+}
+
+.main-fooder-content ul li p {
+    margin-left: 50px;
+}
+
+.main-fooder-content ul li::after {
+    content: "";
+    border: 1px solid #252525;
+    padding-top: 70px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+}
+
+
+/* FIN MAIN FOODER */
+
+@media(min-width:990px) and (max-width:1200px) {
+    .main-about-personal {
+        width: 40%;
+    }
+    .main-about-list span {
+        display: block;
+    }
+    .main-cards {
+        width: 80%;
+    }
+}
+
+@media(max-width:992px) {
+    .container {
+        width: 90%;
+    }
+    /* INICIO MENU HAMBURGUEZA */
+    .menu-hamburguesa {
+        display: block;
+        z-index: 99999;
+        position: fixed;
+        top: 10px;
+        right: 70px;
+    }
+    .menu-hamburguesa ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #252525;
+        top: 45px;
+        left: -100%;
+        transition: all .5s;
+    }
+    .menu-hamburguesa ul li {
+        display: block;
+    }
+    .menu-hamburguesa ul li a {
+        font-size: 10px;
+        color: white;
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    #btn-menu:checked~ul {
+        left: 0;
+    }
+    /* FIN MENU HAMBURGUEZA */
+    .menu {
+        display: none;
+    }
+    .main-about {
+        flex-wrap: wrap;
+    }
+    .main-about-personal {
+        width: 40%;
+        padding-left: 15px;
+    }
+    .main-cards {
+        margin-top: 90px;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width: 40%;
+        margin-left: 20px;
+    }
+    .card span {
+        display: in;
+    }
+    .main-fooder-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media(max-width:767px) {
+    /* INICIO MENU HAMBURGUEZA */
+    .menu-hamburguesa {
+        display: block;
+        z-index: 99999;
+        position: fixed;
+        top: 10px;
+        right: 70px;
+    }
+    .menu-hamburguesa ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #252525;
+        top: 45px;
+        left: -100%;
+        transition: all .5s;
+    }
+    .menu-hamburguesa ul li {
+        display: block;
+    }
+    .menu-hamburguesa ul li a {
+        font-size: 10px;
+        color: white;
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    #btn-menu:checked~ul {
+        left: 0;
+    }
+    /* FIN MENU HAMBURGUEZA */
+    .main-about-personal {
+        width: 50%;
+    }
+    .main-email {
+        display: block;
+    }
+    .main-skill-content {
+        width: 50%;
+    }
+}
+
+@media(max-width:576px) {
+    .menu {
+        display: none;
+    }
+    .encabezado h2 {
+        display: none;
+    }
+    .encabezado h1 {
+        font-size: 23px;
+        padding: 16px 25px 14px;
+        background: #252525;
+        border-bottom: 1px solid #333;
+        margin-bottom: 36px;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 11;
+        top: 0;
+        transition: all 400ms ease;
+    }
+    /* INICIO MENU HAMBURGUEZA */
+    .menu-hamburguesa {
+        display: block;
+        z-index: 99999;
+        position: fixed;
+        top: 10px;
+        right: 70px;
+    }
+    .menu-hamburguesa ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #252525;
+        top: 45px;
+        left: -100%;
+        transition: all .5s;
+    }
+    .menu-hamburguesa ul li {
+        display: block;
+    }
+    .menu-hamburguesa ul li a {
+        font-size: 10px;
+        color: white;
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    #btn-menu:checked~ul {
+        left: 0;
+    }
+    /* FIN MENU HAMBURGUEZA */
+    /* INICIO MAIN PERSONAL */
+    .main-about-foto-perfil {
+        display: flex;
+        justify-content: center;
+    }
+    .main-about-foto-perfil img {
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-bottom: 40px;
+    }
+    .container {
+        width: 95%;
+    }
+    .main-about-personal {
+        width: 50%;
+    }
+    .main-about-list span {
+        display: block;
+    }
+    .download a {
+        border: 1px solid #ffb400;
+        padding: 15px 35px 15px 10px;
+        border-radius: 30px;
+        position: relative;
+        top: 30px;
+        left: -10px;
+    }
+    .download a span {
+        color: #fff;
+        display: inline;
+    }
+    .download img {
+        width: 47px;
+        position: absolute;
+        right: -17px;
+        top: 0px;
+    }
+    /* FIN MAIN PERSONAL */
+    /* INICIO CARDS */
+    .main-cards {
+        margin-top: 50px;
+    }
+    .card {
+        width: 10%;
+        padding: 10px 120px 10px 20px;
+        border-radius: 5px;
+        width: 35%;
+        margin: 10px auto;
+    }
+    .card span::before {
+        display: none;
+    }
+    /* FIN CARDS */
+    /* INICIO SKILL */
+    .main-skill-content {
+        width: 50%;
+    }
+    /* INICIO MAIN FOODER */
+    .main-fooder-content ul li::after {
+        top: -15px;
+    }
+}
