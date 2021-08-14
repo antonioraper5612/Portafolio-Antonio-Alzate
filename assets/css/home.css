@@ -150,7 +150,7 @@ body {
     background-image: url("../img/fotoperfil.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     width: 60%;
     height: calc(100vh - 80px);
     position: relative;
@@ -215,7 +215,6 @@ body {
     position: relative;
     top: 0px;
     left: 0;
-    width: 36%;
     font-size: 15px;
     z-index: 2;
 }
@@ -313,12 +312,11 @@ body {
         border: 1px solid #ffb400;
         border-radius: 30px;
         margin: 0 60px;
-        padding: 15px 30px 15px 15px;
+        padding: 15px 50px 15px 15px;
         transition: 0.3s ease-out;
         position: relative;
         top: 0;
         left: 0;
-        width: 30%;
         margin-bottom: 50px;
     }
     /* FIN CONTENIDO */
@@ -346,12 +344,11 @@ body {
         border: 1px solid #ffb400;
         border-radius: 30px;
         margin: 0 60px;
-        padding: 15px 0px 15px 15px;
+        padding: 15px 50px 15px 15px;
         transition: 0.3s ease-out;
         position: relative;
         top: 0;
         left: 0;
-        width: 62%;
     }
     /* FIN CONTENIDO */
 }

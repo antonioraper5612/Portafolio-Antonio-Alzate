@@ -569,7 +569,7 @@ body {
         border-radius: 30px;
         position: relative;
         top: 30px;
-        left: -10px;
+        left: 0px;
     }
     .download a span {
         color: #fff;
@@ -578,7 +578,7 @@ body {
     .download img {
         width: 47px;
         position: absolute;
-        right: -17px;
+        right: -13px;
         top: 0px;
     }
     /* FIN MAIN PERSONAL */
