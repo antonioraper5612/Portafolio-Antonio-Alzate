@@ -219,8 +219,6 @@ body {
     height: 160px;
     overflow: hidden;
     border-radius: 30px;
-    outline: none !important;
-    transition: .3s;
 }
 
 .formulario a {
