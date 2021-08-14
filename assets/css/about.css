@@ -199,6 +199,15 @@ body {
     top: 0px;
 }
 
+.Prueba-profe {
+    display: flex;
+    flex-direction: column;
+}
+
+.hola {
+    display: flex
+}
+
 
 /* FIN MAIN PERSONAL */
 
