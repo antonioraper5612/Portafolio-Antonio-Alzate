@@ -149,7 +149,7 @@ body {
 
 .menu-hamburguesa ul li a img {
     width: 40px;
-    margin: 10px 20px;
+    display: inline-block;
 }
 
 
@@ -171,11 +171,19 @@ body {
 }
 
 .main-about-personal {
-    width: 24%;
-    margin-left: 50px;
+    width: 50%;
+    /* margin-left: 50px; */
 }
 
 .main-about-list li {
+    margin-bottom: 20px;
+}
+
+.main-about-list-2 {
+    margin-left: 30px;
+}
+
+.main-about-list-2 li {
     margin-bottom: 20px;
 }
 
@@ -186,11 +194,12 @@ body {
     position: relative;
     top: 30px;
     left: 0;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .download a span {
     color: #fff;
-    display: inline;
 }
 
 .download img {
@@ -200,13 +209,30 @@ body {
     top: 0px;
 }
 
-.Prueba-profe {
+.download a::before {
+    content: "";
+    width: 180px;
+    height: 50px;
+    background: #ffb400;
+    position: absolute;
+    top: 0;
+    right: -150px;
+    transition: all 1s ease;
+    z-index: -1;
+}
+
+.download a:hover:before {
+    transform: translate(-150px, 0px)
+}
+
+.main-about-container {
     display: flex;
     flex-direction: column;
+    width: 60%;
 }
 
 .hola {
-    display: flex
+    display: flex;
 }
 
 
@@ -216,36 +242,34 @@ body {
 /* INICIO CARDS */
 
 .main-cards {
-    width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
 }
 
 .card {
     border: 1px solid #252525;
     padding: 20px 30px 25px 40px;
-    width: 35%;
+    width: 41%;
     border-radius: 5px;
     margin: 10px;
-    width: 40%;
 }
 
 .card h3 {
-    font-size: 50px;
+    font-size: 60px;
     color: #ffb400;
 }
 
 .card h3::after {
     content: "+";
-    font-size: 35px;
+    font-size: 40px;
     position: relative;
     top: -20px;
     left: 0;
 }
 
 .card p {
+    text-transform: uppercase;
     position: relative;
     top: 0;
     left: 30px;
@@ -391,14 +415,14 @@ body {
     .main-about-list span {
         display: block;
     }
-    .main-cards {
-        width: 80%;
+    .main-about-list-2 span {
+        display: block;
     }
 }
 
 @media(max-width:992px) {
     .container {
-        width: 90%;
+        width: 80%;
     }
     /* INICIO MENU HAMBURGUEZA */
     .menu-hamburguesa {
@@ -437,9 +461,16 @@ body {
         flex-wrap: wrap;
     }
     .main-about-personal {
-        width: 40%;
-        padding-left: 15px;
+        width: 100%;
     }
+    .main-about-container {
+        width: 100%;
+    }
+    .main-about-list-2 li span {
+        display: inline;
+    }
+    /* FIN SECCION MAIN PERSONAL  */
+    /* INICO SECIOCION CARDS */
     .main-cards {
         margin-top: 90px;
         width: 90%;
@@ -542,15 +573,21 @@ body {
     }
     .menu-hamburguesa ul li {
         display: block;
+        background-color: aqua;
     }
     .menu-hamburguesa ul li a {
-        font-size: 10px;
         color: white;
         font-size: 25px;
         font-weight: lighter;
+        position: relative;
+        top: 0px;
+        left: 0;
     }
     #btn-menu:checked~ul {
         left: 0;
+    }
+    .menu-hamburgueza ul li a {
+        color: aqua;
     }
     /* FIN MENU HAMBURGUEZA */
     /* INICIO MAIN PERSONAL */
@@ -568,40 +605,36 @@ body {
         width: 95%;
     }
     .main-about-personal {
-        width: 50%;
+        width: 40%;
     }
-    .main-about-list span {
+    .main-about-container {
+        width: 100%;
+    }
+    .main-about-list span,
+    .main-about-list-2 span,
+    .main-email {
         display: block;
-    }
-    .download a {
-        border: 1px solid #ffb400;
-        padding: 15px 35px 15px 10px;
-        border-radius: 30px;
-        position: relative;
-        top: 30px;
-        left: 0px;
-    }
-    .download a span {
-        color: #fff;
-        display: inline;
-    }
-    .download img {
-        width: 47px;
-        position: absolute;
-        right: -13px;
-        top: 0px;
     }
     /* FIN MAIN PERSONAL */
     /* INICIO CARDS */
     .main-cards {
         margin-top: 50px;
+        width: 100%;
     }
     .card {
-        width: 10%;
-        padding: 10px 120px 10px 20px;
-        border-radius: 5px;
-        width: 35%;
-        margin: 10px auto;
+        width: 43%;
+        padding: 15px 45px 15px 15px;
+        margin: 7px;
+    }
+    .card h3 {
+        font-size: 40px;
+    }
+    .card h3::after {
+        font-size: 25px;
+        top: -10px;
+    }
+    .cards p {
+        font-size: 13px;
     }
     .card span::before {
         display: none;

@@ -161,7 +161,7 @@ body {
     box-shadow: 0 0 7px rgb(0 0 0 / 90%);
 }
 
-.contenido a img {
+.button-about a img {
     width: 45px;
     position: absolute;
     right: -1px;
@@ -205,39 +205,40 @@ body {
     margin: 15px 0 28px;
 }
 
-.contenido a {
+.button-about {
+    display: flex;
+    justify-content: center;
+}
+
+.button-about a {
     color: white;
     border: 1px solid #ffb400;
     border-radius: 30px;
     margin: 0 60px;
-    padding: 12px 51px 12px 12px;
+    padding: 12px 50px 12px 12px;
     transition: 0.3s ease-out;
     position: relative;
-    top: 0px;
-    left: 0;
+    bottom: 90px;
+    left: 50px;
     font-size: 15px;
-    z-index: 2;
+    overflow: hidden;
+    display: inline-block;
 }
 
-.contenido a,
-.efecto:hover {
-    transform: translateX(10px);
-}
-
-.efecto {
-    width: 150px;
+.button-about a::before {
+    content: "";
+    width: 185px;
     height: 50px;
     background-color: #ffb400;
-    margin-top: 20px;
-    margin-left: 50px;
-    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 180px;
+    transition: all 1s ease;
+    z-index: -1;
 }
 
-.efecto:hover {
-    transition: all 3s ease;
-    transform: translate(0, -50px);
-    opacity: 1;
-    z-index: -1;
+.button-about a:hover:before {
+    transform: translate(-190px, 0);
 }
 
 
@@ -307,17 +308,10 @@ body {
         align-items: center;
         margin: 0;
     }
-    .contenido a {
-        color: white;
-        border: 1px solid #ffb400;
-        border-radius: 30px;
-        margin: 0 60px;
-        padding: 15px 50px 15px 15px;
-        transition: 0.3s ease-out;
-        position: relative;
-        top: 0;
+    .button-about a {
+        bottom: 10px;
         left: 0;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     /* FIN CONTENIDO */
 }
@@ -339,16 +333,12 @@ body {
         margin-top: 150px;
         font-size: 25px;
     }
-    .contenido a {
-        color: white;
-        border: 1px solid #ffb400;
-        border-radius: 30px;
-        margin: 0 60px;
+    .button-about {
+        display: inline;
+    }
+    .button-about a {
         padding: 15px 50px 15px 15px;
-        transition: 0.3s ease-out;
-        position: relative;
         top: 0;
-        left: 0;
     }
     /* FIN CONTENIDO */
 }
