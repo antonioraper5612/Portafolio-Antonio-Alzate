@@ -602,16 +602,16 @@ body {
         margin-bottom: 40px;
     }
     .container {
-        width: 95%;
+        width: 90%;
     }
     .main-about-personal {
-        width: 40%;
+        width: 50%;
     }
     .main-about-container {
         width: 100%;
     }
-    .main-about-list span,
-    .main-about-list-2 span,
+    .main-about-list li span,
+    .main-about-list-2 li span,
     .main-email {
         display: block;
     }
