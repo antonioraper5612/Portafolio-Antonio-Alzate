@@ -1,193 +1,279 @@
-    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
-    /*font-family: 'Ubuntu', sans-serif;*/
-    
-    body {
-        background-color: #111111;
-        font-family: 'Ubuntu', sans-serif;
-    }
-    
-    .encabezado {
-        display: flex;
-        justify-content: center;
-        margin: 40px 0;
-    }
-    
-    .encabezado h2 {
-        color: rgba(255, 255, 255, 0.07);
-        font-size: 6.8rem;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 700;
-    }
-    
-    .encabezado h1 {
-        position: absolute;
-        top: 70px;
-        color: white;
-        font-size: 3.5rem;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-    
-    .encabezado h1 span {
-        color: #FFB400;
-    }
-    /*NAVEGACION*/
-    
-    .menu {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 70px;
-        right: 10px;
-        z-index: 1;
-    }
-    
-    .menu img {
-        width: 40px;
-    }
-    
-    .menu a span:first-child {
-        display: inline-block;
-        padding: 45px;
-        margin: 5px;
-    }
-    
-    .menu a {
-        display: block;
-        position: relative;
-        overflow: hidden;
-        color: #FFB400;
-        font-weight: 700;
-    }
-    
-    .menu a span:last-child {
-        position: absolute;
-        top: 0px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(-100%);
-    }
-    
-    .menu a span {
-        transition: transform 0.2s ease-out;
-    }
-    
-    .menu a:hover span:first-child {
-        transform: translateY(100%);
-    }
-    
-    .menu a:hover span:last-child {
-        transform: none;
-        font-size: 1rem;
-    }
-    /*FIN NAVEGACION*/
-    /* INICIO MENU HAMBURGUEZA */
-    
-    .menu-hamburguesa {
-        position: fixed;
-        display: none;
-    }
-    
-    .lbl-menu {
-        width: 50px;
-        height: 30px;
-        position: relative;
-        cursor: pointer;
-    }
-    
-    .lbl-menu #spn1,
-    #spn2,
-    #spn3 {
-        position: absolute;
-        content: "";
-        background-color: white;
-        width: 50px;
-        height: 5px;
-        border-radius: 5px;
-        transition: all 400ms ease;
-    }
-    
-    #spn2 {
-        top: 11px;
-    }
-    
-    #spn3 {
-        top: 22px;
-    }
-    
-    #btn-menu {
-        display: none;
-    }
-    
-    #btn-menu:checked~.lbl-menu #spn1 {
-        transform: rotate(140deg);
-        top: 10px;
-    }
-    
-    #btn-menu:checked~.lbl-menu #spn2 {
-        opacity: 0;
-    }
-    
-    #btn-menu:checked~.lbl-menu #spn3 {
-        transform: rotate(-140deg);
-        top: 10px;
-    }
-    
-    .menu-hamburguesa ul li a img {
-        width: 40px;
-        margin: 10px 20px;
-    }
-    /* FIN MENU HAMBURGUEZA */
-    
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
+/*font-family: 'Ubuntu', sans-serif;*/
+
+body {
+    background-color: #111111;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.encabezado h2 {
+    color: rgba(255, 255, 255, 0.07);
+    font-size: 6.8rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+.encabezado h1 {
+    position: absolute;
+    top: 70px;
+    color: white;
+    font-size: 3.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.encabezado h1 span {
+    color: #FFB400;
+}
+
+
+/*NAVEGACION*/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    z-index: 1;
+}
+
+.menu img {
+    width: 40px;
+}
+
+.menu a span:first-child {
+    display: inline-block;
+    padding: 45px;
+    margin: 5px;
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #FFB400;
+    font-weight: 700;
+}
+
+.menu a span:last-child {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.menu a span {
+    transition: transform 0.2s ease-out;
+}
+
+.menu a:hover span:first-child {
+    transform: translateY(100%);
+}
+
+.menu a:hover span:last-child {
+    transform: none;
+    font-size: 1rem;
+}
+
+
+/*FIN NAVEGACION*/
+
+
+/* INICIO MENU HAMBURGUEZA */
+
+.menu-hamburguesa {
+    position: fixed;
+    display: none;
+}
+
+.lbl-menu {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.lbl-menu #spn1,
+#spn2,
+#spn3 {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+#spn2 {
+    top: 11px;
+}
+
+#spn3 {
+    top: 22px;
+}
+
+#btn-menu {
+    display: none;
+}
+
+#btn-menu:checked~.lbl-menu #spn1 {
+    transform: rotate(140deg);
+    top: 10px;
+}
+
+#btn-menu:checked~.lbl-menu #spn2 {
+    opacity: 0;
+}
+
+#btn-menu:checked~.lbl-menu #spn3 {
+    transform: rotate(-140deg);
+    top: 10px;
+}
+
+.menu-hamburguesa ul li a img {
+    width: 40px;
+    margin: 10px 20px;
+}
+
+
+/* FIN MENU HAMBURGUEZA */
+
+.main-portafolio {
+    width: 100%;
+}
+
+.main-portafolio-content {
+    width: 33.33%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.main-portafolio img {
+    width: 100%;
+    height: 280px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 3s ease;
+}
+
+.main-portafolio img:hover {
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+@media(min-width:991px) and (max-width:1200px) {
     .main-portafolio img {
-        width: 316xp;
-        height: 195px;
-        padding: 15px;
+        width: 100%;
+        height: 240px;
+        padding: 10px 15px;
         border-radius: 20px;
+    }
+    .main-portafolio img {
+        transition: all 3s ease;
+    }
+}
+
+@media(max-width:992px) {
+    /* QUITA EL MENU LATERAL */
+    .menu {
+        display: none;
+    }
+    /* INICIO MENU HAMBURGUEZA */
+    .menu-hamburguesa {
+        display: block;
+        z-index: 99999;
+        position: fixed;
+        top: 10px;
+        right: 70px;
+    }
+    .menu-hamburguesa ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #252525;
+        top: 45px;
+        left: -100%;
+        transition: all .5s;
+    }
+    .menu-hamburguesa ul li {
+        display: block;
+    }
+    .menu-hamburguesa ul li a {
+        font-size: 10px;
+        color: white;
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    #btn-menu:checked~ul {
+        left: 0;
+    }
+    /* FIN MENU HAMBURGUEZA  */
+    .container {
+        width: 90%;
+    }
+    .main-portafolio-content {
+        width: 50%;
+    }
+    .main-portafolio-content img {
+        width: 100%;
+        height: 270px;
+        transition: all 3s ease;
+    }
+}
+
+@media(max-width:767px) {
+    .container {
+        width: 100%;
+    }
+    .main-portafolio-content img {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media(max-width:578px) {
+    .encabezado h2 {
+        display: none;
+    }
+    .encabezado h1 {
+        font-size: 23px;
+        padding: 16px 25px 14px;
+        background: #252525;
+        border-bottom: 1px solid #333;
+        margin-bottom: 36px;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 11;
+        top: 0;
         transition: all 400ms ease;
+        font-size: 30px;
     }
-    
-    @media(max-width:992px) {
-        /* QUITA EL MENU LATERAL */
-        .menu {
-            display: none;
-        }
-        /* INICIO MENU HAMBURGUEZA */
-        .menu-hamburguesa {
-            display: block;
-            z-index: 99999;
-            position: fixed;
-            top: 10px;
-            right: 70px;
-        }
-        .menu-hamburguesa ul {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            background-color: #252525;
-            top: 45px;
-            left: -100%;
-            transition: all .5s;
-        }
-        .menu-hamburguesa ul li {
-            display: block;
-        }
-        .menu-hamburguesa ul li a {
-            font-size: 10px;
-            color: white;
-            font-size: 25px;
-            font-weight: lighter;
-        }
-        #btn-menu:checked~ul {
-            left: 0;
-        }
-        /* FIN MENU HAMBURGUEZA  */
-        .main-portafolio {
-            transition: all 400ms ease;
-        }
+    .main-portafolio-content {
+        width: 100%;
     }
+    .main-portafolio-content img {
+        width: 100%;
+        height: 290px;
+        transition: all 3s ease;
+    }
+}
