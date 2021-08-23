@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/grid.css">
     <link rel="stylesheet" href="assets/css/portafolio.css">
+    <link rel="stylesheet" href="assets/css/cambioColor.css">
     <title>Portafolio</title>
 </head>
 
@@ -22,19 +23,19 @@
                     <span id="spn2"></span>
                     <span id="spn3"></span>
                 </label>
-                <ul>
+                <ul class="ul-menu-hamburgueza">
                     <li>
                         <a href="index.html"><img src="assets/img/iconos/002-home-black.svg" alt="HOME">HOME
                         </a>
                     </li>
 
                     <li>
-                        <a href="about.html"><img src="assets/img/iconos/003-user-black.svg" alt="ABOUT">ABOUT
+                        <a href="about.html"><img src="assets/img/iconos/002-user-yellow.svg" alt="ABOUT">ABOUT
                         </a>
                     </li>
 
                     <li>
-                        <a href="portafolio.html"><img src="assets/img/iconos/001-portafolio-yellow.svg" alt="PORTAFOLIO">PORTAFOLIO
+                        <a href="portafolio.html"><img src="assets/img/iconos/002-portafolio-black.svg" alt="PORTAFOLIO">PORTAFOLIO
                         </a>
                     </li>
                     <li>
@@ -46,54 +47,66 @@
                 </ul>
             </div>
             <ul class="menu">
-                <li>
+                <li class="main-img ">
                     <a href="index.html">
-                        <span>
-                            <img src="assets/img/iconos/002-home-black.svg" alt="HOME">
-                        </span>
-                        <span>
-                            HOME
-                        </span>
+                        <img src="assets/img/iconos/001-home.svg" alt="HOME">
+
                     </a>
                 </li>
 
-                <li>
+                <li class="main-img ">
                     <a href="about.html">
-                        <span>
-                            <img src="assets/img/iconos/003-user-black.svg" alt="ABOUT" >
-                        </span>
-                        <span>
-                            ABOUT
-                        </span>
+                        <img src="assets/img/iconos/002-user.svg" alt="HOME">
+
                     </a>
                 </li>
 
-                <li>
+                <li class="main-img cambiobackground">
                     <a href="portafolio.html">
-                        <span>
-                            <img src="assets/img/iconos/001-portafolio-yellow.svg" alt="PORTAFOLIO" >
-                        </span>
-                        <span class="active">
-                            PORTAFOLIO
-                        </span>
+
+                        <img src="assets/img/iconos/001-portfolio.svg" alt="HOME">
                     </a>
                 </li>
-                <li>
+                <li class="main-img">
                     <a href="contact.html">
-                        <span>
-                            <img src="assets/img/iconos/007-contact-black.svg" alt="CONTACT" >
-                        </span>
-                        <span>
-                            CONTACT
-                        </span>
+                        <img src="assets/img/iconos/003-letter.svg" alt="HOME">
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
     <section>
+        <div>
+            <button id="color"><img class="rotated " src="assets/img/iconos/settings.svg" alt=""> </button>
+        </div>
+        <div class="main-colores " id="menuColores">
+            <div>
+                <h2>style switcher</h2>
+                <hr>
+                <label for="cerrar" id="cerrar">
+                    <span class="cerrar"></span>
+                    <span class="cerrar"></span>
+                </label>
+            </div>
+
+            <div>
+                <span class="colores" id="blue"></span>
+                <span class="colores" id="blueviolet"></span>
+                <span class="colores" id="goldenrod"></span>
+                <span class="colores" id="green"></span>
+                <span class="colores" id="magenta"></span>
+                <span class="colores" id="orange"></span>
+                <span class="colores" id="purple"></span>
+                <span class="colores" id="red"></span>
+                <span class="colores" id="yellow"></span>
+                <span class="colores" id="yellowgreen"></span>
+            </div>
+            <button>PURCHASE</button>
+        </div>
+    </section>
+    <section>
         <div class="encabezado ">
-            <h1>MY<span> PORTAFOLIO</span></h1>
+            <h1>MY<span class="cambioColorFuente"> PORTAFOLIO</span></h1>
             <h2>WORKS</h2>
         </div>
     </section>
@@ -129,7 +142,7 @@
             </div>
         </div>
     </section>
-
+    <script src="assets/js/cambioColor.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/grid.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/cambioColor.css">
 
 
     <title>Home</title>
@@ -23,14 +24,14 @@
                     <span id="spn2"></span>
                     <span id="spn3"></span>
                 </label>
-                <ul>
+                <ul class="ul-menu-hamburgueza">
                     <li>
-                        <a href="index.html"><img src="assets/img/iconos/001-home-yellow.svg" alt="HOME">HOME
+                        <a href="index.html"><img src="assets/img/iconos/002-home-black.svg" alt="HOME">HOME
                         </a>
                     </li>
 
                     <li>
-                        <a href="about.html"><img src="assets/img/iconos/003-user-black.svg" alt="ABOUT">ABOUT
+                        <a href="about.html"><img src="assets/img/iconos/002-user-yellow.svg" alt="ABOUT">ABOUT
                         </a>
                     </li>
 
@@ -47,54 +48,65 @@
                 </ul>
             </div>
             <ul class="menu">
-                <li>
+                <li class="main-img cambiobackground">
                     <a href="index.html">
-                        <span>
-                            <img src="assets/img/iconos/001-home-yellow.svg" alt="HOME" class="home">
-                        </span>
-                        <span class="active">
+                        <img src="assets/img/iconos/001-home.svg" alt="HOME">
 
-                            HOME
-                        </span>
                     </a>
                 </li>
 
-                <li>
+                <li class="main-img ">
                     <a href="about.html">
-                        <span>
-                            <img src="assets/img/iconos/003-user-black.svg" alt="ABOUT" class="home">
-                        </span>
-                        <span>
-                            ABOUT
-                        </span>
+                        <img src="assets/img/iconos/002-user.svg" alt="HOME">
+
                     </a>
                 </li>
 
-                <li>
+                <li class="main-img">
                     <a href="portafolio.html">
-                        <span>
-                            <img src="assets/img/iconos/002-portafolio-black.svg" alt="PORTAFOLIO" class="home">
-                        </span>
-                        <span>
-                            PORTAFOLIO
-                        </span>
+
+                        <img src="assets/img/iconos/001-portfolio.svg" alt="HOME">
                     </a>
                 </li>
-                <li>
+                <li class="main-img">
                     <a href="contact.html">
-                        <span>
-                            <img src="assets/img/iconos/007-contact-black.svg" alt="CONTACT" class="home">
-                        </span>
-                        <span>
-                            CONTACT
-                        </span>
+                        <img src="assets/img/iconos/003-letter.svg" alt="HOME">
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
     <section>
-        <div class="fondo-secundario"></div>
+        <div>
+            <button id="color"><img class="rotated " src="assets/img/iconos/settings.svg" alt=""> </button>
+        </div>
+        <div class="main-colores " id="menuColores">
+            <div>
+                <h2>style switcher</h2>
+                <hr>
+                <label for="cerrar" id="cerrar">
+                    <span class="cerrar"></span>
+                    <span class="cerrar"></span>
+                </label>
+            </div>
+
+            <div>
+                <span class="colores" id="blue"></span>
+                <span class="colores" id="blueviolet"></span>
+                <span class="colores" id="goldenrod"></span>
+                <span class="colores" id="green"></span>
+                <span class="colores" id="magenta"></span>
+                <span class="colores" id="orange"></span>
+                <span class="colores" id="purple"></span>
+                <span class="colores" id="red"></span>
+                <span class="colores" id="yellow"></span>
+                <span class="colores" id="yellowgreen"></span>
+            </div>
+            <button>PURCHASE</button>
+        </div>
+    </section>
+    <section>
+        <div class="fondo-secundario cambiobackground"></div>
     </section>
     <section class="container">
         <div class="main-contenido">
@@ -104,16 +116,17 @@
                 <img src="assets/img/img-mobile.jpg" alt="">
             </div>
             <div class="contenido">
-                <h1>I'M ANTONIO ALZATE. <span>WEB DESIGNER</span></h1>
+                <h1 class="cambioColorFuente">I'M ANTONIO ALZATE. <span>WEB DESIGNER</span></h1>
                 <p>I'm a Colombia based web designer & front‑end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
             </div>
 
         </div>
 
         <div class="button-about">
-            <a href="about.html"><img src="assets/img/iconos/005-right-arrow.svg " alt=" "> <span>MORE ABOUT ME</span> </a>
+            <a class="cambioBorder" href="about.html"><img src="assets/img/iconos/005-right-arrow.svg " alt=" "> <span>MORE ABOUT ME</span> </a>
         </div>
     </section>
+    <script src="assets/js/cambioColor.js"></script>
 </body>
 
 </html>

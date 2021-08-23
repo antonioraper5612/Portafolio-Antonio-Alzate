@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/cambioColor.css">
     <title>ABOUT ME</title>
 </head>
 
@@ -44,55 +45,66 @@
                 </ul>
             </div>
             <ul class="menu">
-                <li>
+                <li class="main-img">
                     <a href="index.html">
-                        <span>
-                            <img src="assets/img/iconos/002-home-black.svg" alt="HOME">
-                        </span>
-                        <span>
+                        <img src="assets/img/iconos/001-home.svg" alt="HOME">
 
-                            HOME
-                        </span>
                     </a>
                 </li>
 
-                <li>
+                <li class="main-img cambiobackground">
                     <a href="about.html">
-                        <span>
-                            <img src="assets/img/iconos/002-user-yellow.svg" alt="ABOUT">
-                        </span>
-                        <span class="active">
-                            ABOUT
-                        </span>
+                        <img src="assets/img/iconos/002-user.svg" alt="HOME">
+
                     </a>
                 </li>
 
-                <li>
+                <li class="main-img">
                     <a href="portafolio.html">
-                        <span>
-                            <img src="assets/img/iconos/002-portafolio-black.svg" alt="PORTAFOLIO">
-                        </span>
-                        <span>
-                            PORTAFOLIO
-                        </span>
+
+                        <img src="assets/img/iconos/001-portfolio.svg" alt="HOME">
                     </a>
                 </li>
-                <li>
+                <li class="main-img">
                     <a href="contact.html">
-                        <span>
-                            <img src="assets/img/iconos/007-contact-black.svg" alt="CONTACT">
-                        </span>
-                        <span>
-                            CONTACT
-                        </span>
+                        <img src="assets/img/iconos/003-letter.svg" alt="HOME">
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
+    <section>
+        <div>
+            <button id="color"><img class="rotated " src="assets/img/iconos/settings.svg" alt=""> </button>
+        </div>
+        <div class="main-colores " id="menuColores">
+            <div>
+                <h2>style switcher</h2>
+                <hr>
+                <label for="cerrar" id="cerrar">
+                    <span class="cerrar"></span>
+                    <span class="cerrar"></span>
+                </label>
+            </div>
+
+            <div>
+                <span class="colores" id="blue"></span>
+                <span class="colores" id="blueviolet"></span>
+                <span class="colores" id="goldenrod"></span>
+                <span class="colores" id="green"></span>
+                <span class="colores" id="magenta"></span>
+                <span class="colores" id="orange"></span>
+                <span class="colores" id="purple"></span>
+                <span class="colores" id="red"></span>
+                <span class="colores" id="yellow"></span>
+                <span class="colores" id="yellowgreen"></span>
+            </div>
+            <button>PURCHASE</button>
+        </div>
+    </section>
     <section class="container">
         <div class="encabezado ">
-            <h1>ABOUT<span> Me</span></h1>
+            <h1>ABOUT<span class="cambioColorFuente"> Me</span></h1>
             <h2>RESUME</h2>
         </div>
     </section>
@@ -128,30 +140,33 @@
                     </div>
                 </div>
                 <div class="download">
-                    <a href="#"><img src="assets/img/iconos/001-cloud-computing.svg" alt="">
+                    <a class="cambioBorder" href="#">
+                        <div class="main-img-2 cambiobackground">
+                            <img class="download-img" src="assets/img/iconos/001-direct-download.svg" alt="">
+                        </div>
                         <span>DOWNLOAD CV</span> </a>
                 </div>
             </div>
 
             <div class="main-cards ">
                 <div class="card">
-                    <h3>12</h3>
+                    <h3 class="cambioColorFuente">12</h3>
                     <p>years of <span>experience</span> </p>
                 </div>
                 <div class="card">
-                    <h3>97</h3>
+                    <h3 class="cambioColorFuente">97</h3>
                     <p>COMPLETED
                         <span>PROJECTS</span>
                     </p>
                 </div>
                 <div class="card">
-                    <h3>81</h3>
+                    <h3 class="cambioColorFuente">81</h3>
                     <p>HAPPY
                         <span>CUSTOMERS</span>
                     </p>
                 </div>
                 <div class="card">
-                    <h3>53</h3>
+                    <h3 class="cambioColorFuente">53</h3>
                     <p>AWARDS <span>WON</span>
                     </p>
                 </div>
@@ -214,8 +229,8 @@
             <div class="main-fooder-content">
                 <ul>
                     <li>
-                        <div class="main-fooder-img">
-                            <img src="assets/img/iconos/001-home-yellow.svg" alt="">
+                        <div class="main-fooder-img cambiobackground">
+                            <img src="assets/img/iconos/001-home.svg" alt="">
                         </div>
                         <span class="title-principal-fooder">2018-Present</span> <span class="sub-title-fooder">
                             Envato</span>
@@ -227,8 +242,8 @@
 
                     </li>
                     <li>
-                        <div class="main-fooder-img">
-                            <img src="assets/img/iconos/001-home-yellow.svg" alt="">
+                        <div class="main-fooder-img cambiobackground">
+                            <img src="assets/img/iconos/001-home.svg" alt="">
                         </div>
                         <span class="title-principal-fooder">2013-2018</span><span class="sub-title-fooder">
                             Themeforest</span>
@@ -240,8 +255,8 @@
 
                     </li>
                     <li>
-                        <div class="main-fooder-img">
-                            <img src="assets/img/iconos/001-home-yellow.svg" alt="">
+                        <div class="main-fooder-img cambiobackground">
+                            <img src="assets/img/iconos/001-home.svg" alt="">
                         </div>
                         <span class="title-principal-fooder">2005-2013</span><span class="sub-title-fooder">
                             videohive</span>
@@ -256,8 +271,8 @@
                 <div>
                     <ul>
                         <li>
-                            <div class="main-fooder-img">
-                                <img src="assets/img/iconos/002-user-yellow.svg" alt="">
+                            <div class="main-fooder-img cambiobackground">
+                                <img src="assets/img/iconos/001-home.svg" alt="">
                             </div>
                             <span class="title-principal-fooder">2018-Present</span> <span class="sub-title-fooder">
                                 Envato</span>
@@ -269,8 +284,8 @@
 
                         </li>
                         <li>
-                            <div class="main-fooder-img">
-                                <img src="assets/img/iconos/002-user-yellow.svg" alt="">
+                            <div class="main-fooder-img cambiobackground">
+                                <img src="assets/img/iconos/001-home.svg" alt="">
                             </div>
                             <span class="title-principal-fooder">2013-2018</span><span class="sub-title-fooder">
                                 Themeforest</span>
@@ -282,8 +297,8 @@
 
                         </li>
                         <li>
-                            <div class="main-fooder-img">
-                                <img src="assets/img/iconos/002-user-yellow.svg" alt="">
+                            <div class="main-fooder-img cambiobackground">
+                                <img src="assets/img/iconos/001-home.svg" alt="">
                             </div>
                             <span class="title-principal-fooder">2005-2013</span><span class="sub-title-fooder">
                                 videohive</span>
@@ -302,7 +317,7 @@
     </section>
 
 
-
+    <script src="assets/js/cambioColor.js"></script>
 
 </body>
 

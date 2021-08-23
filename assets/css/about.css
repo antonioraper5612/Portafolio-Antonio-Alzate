@@ -43,56 +43,9 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 50px;
+    top: 130px;
     right: 10px;
     z-index: 1;
-}
-
-.menu img {
-    width: 40px;
-}
-
-.menu a span:first-child {
-    display: inline-block;
-    padding: 45px;
-    margin: 5px;
-}
-
-.menu a {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    color: floralwhite;
-    font-weight: 700;
-}
-
-.active {
-    color: #ffb400;
-}
-
-.menu a span:last-child {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-100%);
-}
-
-.menu a span {
-    transition: transform 0.2s ease-out;
-}
-
-.menu a:hover span:first-child {
-    transform: translateY(100%);
-}
-
-.menu a:hover span:last-child {
-    transform: none;
-    font-size: 1rem;
 }
 
 
@@ -191,33 +144,54 @@ body {
     margin-bottom: 20px;
 }
 
-.download a {
-    border: 1px solid #ffb400;
-    padding: 15px 55px 15px 10px;
-    border-radius: 30px;
+.download {
     position: relative;
-    top: 30px;
+    top: 0;
     left: 0;
-    display: inline-block;
-    overflow: hidden;
 }
 
-.download a span {
-    color: #fff;
+.download a {
+    padding: 15px 60px 15px 25px;
+    border-radius: 30px;
+    border: 1px solid;
+    border-color: #ffb400;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.download span {
+    color: #fff
 }
 
 .download img {
-    width: 50px;
     position: absolute;
-    right: 0;
-    top: 0px;
+    right: -10;
+}
+
+.main-img-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffb400;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    bottom: -5px;
+    right: -1px;
+}
+
+.main-img-2 img {
+    width: 22px;
 }
 
 .download a::before {
     content: "";
     width: 180px;
     height: 50px;
-    background: #ffb400;
+    background-color: #ffb400;
     position: absolute;
     top: 0;
     right: -150px;
@@ -226,7 +200,7 @@ body {
 }
 
 .download a:hover:before {
-    transform: translate(-150px, 0px)
+    transform: translate(-170px, 0px);
 }
 
 .main-about-container {
@@ -366,21 +340,25 @@ body {
     border-top: 1px solid #333;
     color: #fff;
     padding: 10px;
-    opacity: .8;
+    opacity: 0.8;
     position: relative;
     bottom: -20px;
     margin-right: 5px;
 }
 
 .main-fooder-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     position: relative;
 }
 
 .main-fooder-img img {
-    width: 40px;
-    position: absolute;
-    top: -12px;
-    z-index: 9;
+    width: 22px;
 }
 
 .main-fooder-content ul li {
@@ -404,15 +382,14 @@ body {
     border: 1px solid #252525;
     padding-top: 70px;
     position: relative;
-    top: 0;
-    bottom: 0;
-    left: 20px;
+    bottom: 25px;
+    left: 23px;
 }
 
 
 /* FIN MAIN FOODER */
 
-@media(min-width:990px) and (max-width:1200px) {
+@media (min-width: 990px) and (max-width: 1200px) {
     .main-about-personal {
         width: 40%;
     }
@@ -424,7 +401,7 @@ body {
     }
 }
 
-@media(max-width:992px) {
+@media (max-width: 992px) {
     .container {
         width: 80%;
     }
@@ -496,9 +473,14 @@ body {
         flex-direction: column;
         width: 100%;
     }
+    /* INICIO MAIN FOODER */
+    .main-fooder-content ul li::after {
+        bottom: 27px;
+        z-index: -1;
+    }
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .main-about-personal {
         width: 50%;
     }
@@ -508,9 +490,13 @@ body {
     .main-skill-content {
         width: 50%;
     }
+    /* INICIO MAIN FOODER */
+    .main-fooder-content ul li::after {
+        bottom: 24px;
+    }
 }
 
-@media(max-width:576px) {
+@media (max-width: 576px) {
     .menu {
         display: none;
     }
@@ -586,6 +572,7 @@ body {
     }
     /* INICIO MAIN FOODER */
     .main-fooder-content ul li::after {
-        top: -15px;
+        z-index: -1;
+        top: -41px;
     }
 }
