@@ -21,10 +21,9 @@ const cerrarMenu = () => {
 
 for (let i = 0; i < colorClick.length; i++) {
     let element = colorClick[i];
-    element.addEventListener("click", function() {
+    element.addEventListener("click", () =>
         BuscarColor(element.attributes)
-
-    });
+    );
 }
 
 const BuscarColor = (BuscarColor) => {

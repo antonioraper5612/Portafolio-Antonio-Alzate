@@ -180,6 +180,29 @@
 
 /* ESTILO IMAGENES DEL MENU */
 
+.main-img-haburgueza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1e1e;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.title-span {
+    margin-left: 10px;
+}
+
+.manuHamburgueza-margin-top {
+    margin-top: 90px;
+}
+
+
+/* FIN MENU HABURGUEZA */
+
 .main-img {
     display: flex;
     justify-content: center;
@@ -196,7 +219,7 @@
 }
 
 .cambiobackground {
-    color: #ffb400;
+    background-color: #ffb400;
 }
 
 .cambioColorFuente {
@@ -205,4 +228,19 @@
 
 .cambioBorder {
     color: #ffb400;
+}
+
+@media (max-width: 992px) {
+    #color {
+        top: 0;
+    }
+}
+
+@media (max-width: 776px) {
+    #color {
+        display: none;
+    }
+    .manuHamburgueza-margin-top {
+        margin-top: 20px;
+    }
 }
